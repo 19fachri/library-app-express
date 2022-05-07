@@ -1,11 +1,11 @@
 const request = require("supertest")
-const app = require("../app")
-const { hashPassword } = require("../helpers/bcrypt")
-const { signToken } = require("../helpers/jwt")
-const { sequelize } = require("../models")
+const app = require("../../app")
+const { hashPassword } = require("../../helpers/bcrypt")
+const { signToken } = require("../../helpers/jwt")
+const { sequelize } = require("../../models")
 const { queryInterface } = sequelize
 
-const url = "/books"
+const url = "/admin/books"
 const users = [
   {
     username: "admin",

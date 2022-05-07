@@ -1,4 +1,4 @@
-const { Book } = require("../models")
+const { Book } = require("../../models")
 
 class BookController {
   static async create(req, res, next){

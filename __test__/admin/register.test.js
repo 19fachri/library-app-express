@@ -1,10 +1,10 @@
 const request = require("supertest")
-const app = require("../app")
-const { sequelize } = require("../models")
+const app = require("../../app")
+const { sequelize } = require("../../models")
 const { queryInterface } = sequelize
-const { hashPassword } = require("../helpers/bcrypt")
+const { hashPassword } = require("../../helpers/bcrypt")
 
-const url = "/register"
+const url = "/admin/register"
 const users = [
   {
     username: "user0",

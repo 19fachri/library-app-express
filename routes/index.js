@@ -1,10 +1,8 @@
 const errorHandler = require('../middlewares/errorHandler')
-const authRouth = require('./authRoutes')
-const bookRoutes = require('./bookRoutes')
+const adminRoutes = require('./admin')
 const routes = require('express').Router()
 
-routes.use("/", authRouth)
-routes.use("/books", bookRoutes)
+routes.use("/admin", adminRoutes)
 
 routes.use(errorHandler)
 
