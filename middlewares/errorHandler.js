@@ -11,6 +11,10 @@ module.exports = (err, req, res, next) => {
       status = 400
       message = err.errors[0].message
       break;
+    case "IncorectEmailOrPassword":
+      status = 401
+      message = "Incorect email or password"
+      break;
   }
   res.status(status).json({message})
 }
