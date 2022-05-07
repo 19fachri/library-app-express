@@ -15,6 +15,15 @@ module.exports = (err, req, res, next) => {
       status = 401
       message = "Incorect email or password"
       break;
+    case "LoginIsRequired":
+      status = 401
+      message = "Login is required"
+      break;
+    case "ForbidenAccess":
+      status = 403
+      message = "Forbiden access"
+      break;
   }
+  console.log(err);
   res.status(status).json({message})
 }

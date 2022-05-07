@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       description: {
@@ -24,6 +25,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       CategoryId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: "Categories",
