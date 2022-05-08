@@ -7,6 +7,7 @@ bookRoutes.use(isAuthenticate)
 bookRoutes.use(isAdmin)
 
 bookRoutes
+  .get("/", BookController.index)
   .post("/", BookController.create)
 
 module.exports = bookRoutes
