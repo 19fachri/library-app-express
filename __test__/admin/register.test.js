@@ -1,75 +1,37 @@
-const request = require("supertest")
-const app = require("../../app")
-const { sequelize } = require("../../models")
-const { queryInterface } = sequelize
-const { hashPassword } = require("../../helpers/bcrypt")
+const { 
+  request,
+  app,
+  truncateUsersTable, 
+  seedUsersTable, 
+  adminUser
+} = require("../helper")
 
 const url = "/admin/register"
-const users = [
-  {
-    username: "user0",
-    email: "user0@mail.com",
-    password: hashPassword("password"),
-    createdAt: new Date(),
-    updatedAt: new Date()
-  },
-  {
-    username: "user1",
-    email: "user1@mail.com",
-    password: "password"
-  },
-  {
-    email: "user2@mail.com",
-    password: "password"
-  },
-  {
-    username: "user3",
-    password: "password"
-  },
-  {
-    username: "user4",
-    email: "user4@mail.com",
-  },
-  {
-    username: "user5",
-    email: "invalid email",
-    password: "password"
-  },
-  {
-    username: "",
-    email: "user6@mail.com",
-    password: "password"
-  },
-  {
-    username: "user7",
-    email: "",
-    password: "password"
-  },
-  {
-    username: "user8",
-    email: "user8@mail.com",
-    password: ""
-  }
-]
+const newUser = {
+  username: "new user",
+  email: "newuser@mail.com",
+  password: "password"
+}
+const registeredUser = adminUser
 
 beforeAll( async () => {
-  const deleteOption = {
-    truncate: true,
-    cascade: true,
-    restartIdentity: true
-  }
   try {
-    await queryInterface.bulkDelete("Users", null, deleteOption)
-    await queryInterface.bulkInsert("Users", [users[0]])
+    await truncateUsersTable()
+    await seedUsersTable()
   } catch (error) {
     console.log(error);
   }
 })
 
 test("Register new user with valid input", async () => {
+  const user = {
+    username: newUser.username,
+    email: newUser.email,
+    password: newUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[1])
+    .send(user)
     .expect(201)
   const data = response.body
   expect(data.access_token).toBeDefined()
@@ -80,9 +42,13 @@ test("Register new user with valid input", async () => {
 })
 
 test("Register with no username", async () => {
+  const user = {
+    email: newUser.email,
+    password: newUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[2])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -90,9 +56,13 @@ test("Register with no username", async () => {
 })
 
 test("Register with no email", async () => {
+  const user = {
+    username: newUser.username,
+    password: newUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[3])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -100,9 +70,13 @@ test("Register with no email", async () => {
 })
 
 test("Register with no password", async () => {
+  const user = {
+    username: newUser.username,
+    email: newUser.email
+  }
   const response = await request(app)
     .post(url)
-    .send(users[4])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -110,9 +84,14 @@ test("Register with no password", async () => {
 })
 
 test("Register with invalid email", async () => {
+  const user = {
+    username: newUser.username,
+    email: "invalidEmail",
+    password: newUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[5])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -120,9 +99,10 @@ test("Register with invalid email", async () => {
 })
 
 test("Register with registered email", async () => {
+  const user = registeredUser
   const response = await request(app)
     .post(url)
-    .send(users[0])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -130,9 +110,14 @@ test("Register with registered email", async () => {
 })
 
 test("Register with empty username", async () => {
+  const user = {
+    username: "",
+    email: newUser.email,
+    password: newUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[6])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -140,9 +125,14 @@ test("Register with empty username", async () => {
 })
 
 test("Register with empty email", async () => {
+  const user = {
+    username: newUser.username,
+    email: "",
+    password: newUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[7])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()
@@ -150,9 +140,14 @@ test("Register with empty email", async () => {
 })
 
 test("Register with empty password", async () => {
+  const user = {
+    username: newUser.username,
+    email: newUser.email,
+    password: ""
+  }
   const response = await request(app)
     .post(url)
-    .send(users[8])
+    .send(user)
     .expect(400)
   const data = response.body
   expect(data.message).toBeDefined()

@@ -23,6 +23,10 @@ module.exports = (err, req, res, next) => {
       status = 403
       message = "Forbiden access"
       break;
+    case "DataNotFound":
+      status = 404
+      message = "Data not found"
+      break;
   }
   console.log(err);
   res.status(status).json({message})

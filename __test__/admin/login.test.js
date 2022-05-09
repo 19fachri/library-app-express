@@ -1,52 +1,31 @@
-const request = require("supertest")
-const app = require("../../app")
-const { sequelize } = require("../../models")
-const { queryInterface } = sequelize
-const { hashPassword } = require("../../helpers/bcrypt")
+const { 
+  request,
+  app,
+  truncateUsersTable,
+  seedUsersTable,
+  adminUser
+} = require("../helper")
 
 const url = "/admin/login"
-const users = [
-  {
-    username: "user",
-    email: "user@mail.com",
-    password: hashPassword("password"),
-    createdAt: new Date(),
-    updatedAt: new Date()
-  },
-  {
-    email: "user@mail.com",
-    password: "password"
-  },
-  {
-    email: "otheruser@mail.com",
-    password: "password"
-  },
-  {
-    email: "user@mail.com",
-    password: "invalidpassword"
-  }
-]
+const registeredUser = adminUser
 
 beforeAll( async () => {
-  const deleteOption = {
-    truncate: true,
-    cascade: true,
-    restartIdentity: true
-  }
   try {
-    await queryInterface.bulkDelete("Users", null, deleteOption)
-    await queryInterface.bulkInsert("Users", [users[0]])
+    await truncateUsersTable()
+    await seedUsersTable()
   } catch (error) {
     console.log(error);
   }
 })
 
 test("Login user with valid input", async () => {
+  const user = registeredUser
   const response = await request(app)
     .post(url)
-    .send(users[1])
+    .send(user)
     .expect(200)
   const data = response.body
+  console.log(data);
   expect(data.access_token).toBeDefined()
   expect(data.user).toBeDefined()
   expect(data.user.username).toBeDefined()
@@ -55,18 +34,26 @@ test("Login user with valid input", async () => {
 })
 
 test("Login user with invalid email", async () => {
+  const user = {
+    email: "invalid@mail.com",
+    password: registeredUser.password
+  }
   const response = await request(app)
     .post(url)
-    .send(users[2])
+    .send(user)
     .expect(401)
   const data = response.body
   expect(data.message).toBe("Incorect email or password")
 })
 
 test("Login user with invalid password", async () => {
+  const user = {
+    email: registeredUser.email,
+    password: "invalidPassword"
+  }
   const response = await request(app)
     .post(url)
-    .send(users[3])
+    .send(user)
     .expect(401)
   const data = response.body
   expect(data.message).toBe("Incorect email or password")

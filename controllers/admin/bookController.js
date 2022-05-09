@@ -43,6 +43,16 @@ class BookController {
       next(error)
     }
   }
+
+  static async delete(req, res, next){
+    try {
+      const { bookId } = req.params
+      const result = await Book.destroy({where: {id: bookId}})
+      res.status(200).json({message: "Book has been deleted"})
+    } catch (error) {
+      next(error)
+    }
+  }
 }
 
 module.exports = BookController
