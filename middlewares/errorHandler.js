@@ -28,6 +28,6 @@ module.exports = (err, req, res, next) => {
       message = "Data not found"
       break;
   }
-  console.log(err);
+  // console.log(err);
   res.status(status).json({message})
 }

@@ -23,8 +23,8 @@ exports.memberUser = {
   role: "member"
 }
 const users = [
-  this.adminUser,
-  this.memberUser
+  {...this.adminUser},
+  {...this.memberUser}
 ]
 const categories = [
   {
