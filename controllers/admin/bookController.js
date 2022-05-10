@@ -44,6 +44,28 @@ class BookController {
     }
   }
 
+  static async show(req, res, next){
+    try {
+      const { bookId } = req.params
+      const book = await Book.findByPk(bookId)
+      res.status(200).json({book})
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  static async update(req, res, next){
+    try {
+      const id = req.params.bookId
+      const { title, description, imageUrl, author, stock, CategoryId } = req.body
+      const option = {where:{id}}
+      await Book.update({ title, description, imageUrl, author, stock, CategoryId }, option)
+      res.status(200).json({message: "Book has been updated"})
+    } catch (error) {
+      next(error)
+    }
+  }
+
   static async delete(req, res, next){
     try {
       const { bookId } = req.params

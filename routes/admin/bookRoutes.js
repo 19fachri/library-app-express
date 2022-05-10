@@ -10,6 +10,8 @@ bookRoutes.use(isAdmin)
 bookRoutes
   .get("/", BookController.index)
   .post("/", BookController.create)
+  .get("/:bookId", isBookEksist, BookController.show)
+  .put("/:bookId", isBookEksist, BookController.update)
   .delete("/:bookId", isBookEksist, BookController.delete)
 
 module.exports = bookRoutes
