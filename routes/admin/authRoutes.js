@@ -1,9 +1,10 @@
-const AuthController = require("../../controllers/admin/authController")
+const AuthController = require("../../controllers/admin/authController");
 
-const authRouth = require("express").Router()
+const authRouth = require("express").Router();
 
 authRouth
   .post("/register", AuthController.register)
   .post("/login", AuthController.login)
+  .post("/google-login", AuthController.googleLogin);
 
-module.exports = authRouth
+module.exports = authRouth;

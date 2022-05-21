@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Book extends Model {
     /**
@@ -10,41 +8,43 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Book.belongsTo(models.Category)
+      Book.belongsTo(models.Category);
     }
   }
-  Book.init({
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: "Title is required"
+  Book.init(
+    {
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Title is required",
+          },
+          notEmpty: {
+            msg: "Title is required",
+          },
         },
-        notEmpty: {
-          msg: "Title is required"
-        }
-      }
+      },
+      description: DataTypes.STRING,
+      imageUrl: DataTypes.STRING,
+      author: DataTypes.STRING,
+      CategoryId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Category is required",
+          },
+          notEmpty: {
+            msg: "Category is required",
+          },
+        },
+      },
     },
-    description: DataTypes.STRING,
-    imageUrl: DataTypes.STRING,
-    author: DataTypes.STRING,
-    stock: DataTypes.INTEGER,
-    CategoryId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: "Category is required"
-        },
-        notEmpty: {
-          msg: "Category is required"
-        }
-      }
+    {
+      sequelize,
+      modelName: "Book",
     }
-  }, {
-    sequelize,
-    modelName: 'Book',
-  });
+  );
   return Book;
 };
