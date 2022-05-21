@@ -1,142 +1,72 @@
 [
   {
-    "title": "Book 0",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "Chainsaw Man, Vol. 1: Volume 1",
+    "description": "Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil-dog Pochita and becomes something new and dangerous--Chainsaw Man!. Denji's a poor young man who'll do anything for money, even hunting down devils with his pet devil-dog Pochita. He's a simple man with simple dreams, drowning under a mountain of debt. But his sad life gets turned upside down one day when he's betrayed by someone he trusts. Now with the power of a devil inside him, Denji's become a whole new man--Chainsaw Man!",
+    "imageUrl": "https://otimages.com/Bookcover/9939/9781974709939.jpg",
+    "author": "Fujimoto, Tatsuki",
     "CategoryId": 1
   },
   {
-    "title": "Book 1",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "Jujutsu Kaisen",
+    "description": "Yuta Okkotsu is a nervous high school student who is suffering from a serious problem--his childhood friend Rika has turned into a curse and won't leave him alone. Since Rika is no ordinary curse, his plight is noticed by Satoru Gojo, a teacher at Jujutsu High.High. ...The prequel to the supernatural exorcist adventure Jujutsu Kaisen!",
+    "imageUrl": "https://otimages.com/Bookcover/0149/9781974720149.jpg",
+    "author": "Akutami, Gege",
     "CategoryId": 1
   },
   {
-    "title": "Book 2",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "Toxic Positivity: Keeping It Real in a World Obsessed with Being Happy",
+    "description": "A powerful guide to owning our emotions--even the difficult ones--in order to show up authentically in the world, from the popular therapist behind the Instagram account @sitwithwhit. Every day, we're bombarded with pressure to be positive. From 'good vibes only' and 'life is good' memes, to endless advice, to 'look on the bright side,' we're constantly told that the key to happiness is silencing negativity wherever it crops up, in ourselves and in others. Even when faced with illness, loss, breakups, and other challenges, there's little space for talking about our real feelings--and processing them so that we can feel better and move forward. But if all th",
+    "imageUrl": "https://otimages.com/Bookcover/8277/9780593418277.jpg",
+    "author": "Goodman, Whitney ",
     "CategoryId": 1
   },
   {
-    "title": "Book 3",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "Big Feelings: How to Be Okay When Things Are Not Okay",
+    "description": "From the duo behind the bestselling book No Hard Feelings and the wildly popular @LizandMollie Instagram, an insightful and approachable illustrated guide to handling our most difficult emotions. We all experience unwieldy feelings. But between our emotion-phobic society and the debilitating uncertainty of modern times, we usually don't know how to talk about what we're going through, much less handle it. Over the past year, Liz Fosslien and Mollie West Duffy's online community has laughed and cried about productivity guilt, pandemic anxiety, and Zoom fatigue. Now, Big Feelings addresses anyone intimidated by oversized feelings they can't predict or control",
+    "imageUrl": "https://otimages.com/Bookcover/8239/9780593418239.jpg",
+    "author": "Fosslien, Liz",
     "CategoryId": 1
   },
   {
-    "title": "Book 4",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "The Black Girl's Guide to Healing Emotional Wounds",
+    "description": "ul li emwish my father had been present in my life, sowould not have accepted a lot of crap from men... li li Growing up,didn't feel loved by my mother which caused.... li li It is hard to find and maintain a solid group of trustworthy girlfriends to do life with... li li emwas devastated by a previous lover and that hurt changed me for the worse... li li emavoid family functions like the plague because there is sure to be some tension present... li li emoften don't feel loved... li li emdon't know what to do with my life andfeel like I'm just going through the motions... li li I'm not happy with how my life turned out.",
+    "imageUrl": "https://otimages.com/Bookcover/2822/9781734692822.jpg",
+    "author": " Smalls, Nijiama ",
     "CategoryId": 1
   },
   {
-    "title": "Book 5",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "I Hope This Finds You Well: Poems",
+    "description": "An Instant New York Times Bestseller strong The author of the #1 New York Times bestseller What Kind of Woman returns with a collection of erasure poems created from notes she received from followers, supporters and detractors--an artform that reclaims the vitriol from online trolls and inspires readers to transform what is ugly or painful in their own lives into something beautiful. strong 'I'm sure you could benefit from jumping on a treadmill' 'Women WANT a male leader . . . It's honest to god the basic human playbook' These are some of the thousands of messages that Kate Baer has received online. Like countless other writers--particularly women--wit",
+    "imageUrl": "https://otimages.com/Bookcover/7998/9780063137998.jpg",
+    "author": "Baer, Kate ",
     "CategoryId": 1
   },
   {
-    "title": "Book 6",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "What Kind of Woman: Poems",
+    "description": "strong An Instant #1 New York Times Bestseller strong strong A Goop Book Club Pick strong strong If you want your breath to catch and your heart to stop, turn to Kate Baer.--Joanna Goddard, Cup of Jo strong br strong A stunning and honest debut poetry collection about the beauty and hardships of being a woman in the world today, and the many roles we play - mother, partner, and friend. strong 'When life throws you a bag of sorrow, hold out your hands Little by little, mountains are climbed.' So ends Kate Baer's remarkable poem 'Things My Girlfriends Teach Me.' In 'Nothing Tastes as Good as Skinny Feels' she challenges her reader to consider their",
+    "imageUrl": "https://otimages.com/Bookcover/8427/9780063008427.jpg",
+    "author": "Baer, Kate ",
     "CategoryId": 1
   },
   {
-    "title": "Book 7",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "Lucky Wreck: Poems",
+    "description": "The poems in Lucky Wreck trace the excitement of plans and the necessary swerving detours we must take when those plans fail. Looking to shipwrecks on the television, road trips ending in traffic accidents, and homes that become sites of infestation, Ada Lim n finds threads of hope amid an array of small tragedies and significant setbacks. Open, honest, and grounded, the poems in this collection seek answers to familiar questions and teach us ways to cope with the pain of many losses with earnestness and humor. Through the wrecks, these poems continue to offer assurance. This darkness is not the scary one, br it's the one before the sun comes up, br the one",
+    "imageUrl": "https://otimages.com/Bookcover/9801/9781938769801.jpg",
+    "author": "Limón, Ada",
     "CategoryId": 1
   },
   {
-    "title": "Book 8",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "How to Cure a Ghost",
+    "description": "A poetry compilation recounting a woman's journey from self-loathing to self-acceptance, confusion to clarity, and bitterness to forgiveness Following in the footsteps of such category killers as Milk and Honey and Whiskey Words & a Shovel, Fariha Róisín's poetry book is a collection of her thoughts as a young, queer, Muslim femme navigating the difficulties of her intersectionality. Simultaneously, this compilation unpacks the contentious relationship that exists between Róisín and her mother, her platonic and romantic heartbreaks, and the cognitive dissonance felt as a result of being so divided among her broad spectrum of identiti",
+    "imageUrl": "https://otimages.com/Bookcover/7565/9781419737565.jpg",
+    "author": "Róisín, Fariha & Ramos, Monica  ",
     "CategoryId": 1
   },
   {
-    "title": "Book 9",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 10",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 11",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 12",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 13",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 14",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 15",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 16",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 17",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 18",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
-    "CategoryId": 1
-  },
-  {
-    "title": "Book 19",
-    "description": "book description",
-    "imageUrl": "https:://source.unsplash.com/300x300?book",
-    "author": "author",
+    "title": "Love Poems for Married People",
+    "description": "NEW YORK TIMES BESTSELLER Based on his wildly popular New Yorker piece, Thurber Prize-winner John Kenney presents a hilarious collection of love poems for, well, married people . Full of brilliant wit, dynamic energy, and a heavy dose of reality, Love Poems for Married People takes the poetic form, turns it upside down and leaves it in the dishwasher to dry. Inspired by one of the most shared New Yorker pieces of all time, this collection captures the reality of life once the spark of a relationship has settled--and hilariously so. With brand new pieces that cover all areas of married life, from parental gripes to dwindling sex lives, Kenney's wry obs",
+    "imageUrl": "https://otimages.com/Bookcover/0007/9780525540007.jpg",
+    "author": " Kenney, John",
     "CategoryId": 1
   }
 ]
